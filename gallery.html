@@ -3,35 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>影像画廊</title>
+    <link rel="stylesheet" href="styles/layout.css" media="screen"/>
 </head>
-<script type="text/javascript" src="showPic/showPic.js"></script>
+
 <body>
 <h1>Snapshots</h1>
 <ul>
     <li>
-        <a href="images/fireworks.jpg" onclick="showPic(this)
-        return false;" title="A fireworks display">Fireworks</a>
+        <a href="images/fireworks.jpg" title="A fireworks display"onClick="showPic(this);
+        return false;">Fireworks</a>
     </li>
     <li>
-        <a href="images/coffee.jpg"
-           onclick="showPic(this)//this指当前元素节点
-        return false;//onclick返回false指这个链接没有被点击可以避免跳出当前页面"
-           title="A coffee ">Coffee</a>
+        <a href="images/coffee.jpg"title="A cup of coffee"
+           onClick="showPic(this);
+        return false;">Coffee</a>
     </li>
     <li>
-        <a href="images/rose.jpg" onclick="showPic(this)
-        return false;"title="A red, red rose">Rose</a>
+        <a href="images/rose.jpg" title="A red, red rose" onClick="showPic(this);
+        return false;">Rose</a>
     </li>
     <li>
-        <a href="images/bigben.jpg" onclick="showPic(this)
-        return false;"title="The famous clock">Big Ben</a>
+        <a href="images/bigben.jpg" title="The famous clock"
+        onClick="showPic(this);
+        return false;">Big Ben</a>
     </li>
     
 </ul>
 <img src="images/placeholder.gif" id="placeholder" alt="my image gallery">
+
 <!--通过添加占位符方法为主页图片预留一个浏览区域。
     在点击某个链接时拦截这个网页的默认行为
     在点击某个链接时，把占位符图片换为与连接对应的图片-->
-
+<p id="description">Choose an image</p>
+<script type="text/javascript" src="showPic/showPic.js"
+></script>
 </body>
 </html>
